@@ -32,6 +32,7 @@ class RNS_system extends CI_Controller {
 		$this->load->library('session');
 		$this->load->helper('download');
 		$replyto = "securedhms@gmail.com";
+		$apikey = "api:key-e4xxxxxxxxxxxd0b8a389d17600555ee";
 	}
 
 
@@ -105,7 +106,7 @@ class RNS_system extends CI_Controller {
 						# code...
 						$ch = curl_init();
 						curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-						curl_setopt($ch, CURLOPT_USERPWD, 'api:key-e415d6a58ae45d0b8a389d17600555ee');
+						curl_setopt($ch, CURLOPT_USERPWD, $apikey);
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 						curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 						curl_setopt($ch, CURLOPT_URL, 
@@ -252,7 +253,7 @@ if ($insert) {
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-	curl_setopt($ch, CURLOPT_USERPWD, 'api:key-e415d6a58ae45d0b8a389d17600555ee');
+	curl_setopt($ch, CURLOPT_USERPWD, $apikey);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	curl_setopt($ch, CURLOPT_URL, 
@@ -453,7 +454,7 @@ public function signup(){
 
 				$ch = curl_init();
 				curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-				curl_setopt($ch, CURLOPT_USERPWD, 'api:key-e415d6a58ae45d0b8a389d17600555ee');
+				curl_setopt($ch, CURLOPT_USERPWD, $apikey);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 				curl_setopt($ch, CURLOPT_URL, 
